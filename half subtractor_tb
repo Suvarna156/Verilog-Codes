@@ -1,0 +1,16 @@
+module hs_tb;
+reg x,y;
+wire diff,borrow;
+hs uut(.x(x),.y(y),.diff(diff),.borrow(borrow));
+initial begin
+x=0;y=0;
+#100
+x=0;y=1;
+#100
+x=1;y=0;
+#100
+x=1;y=1;
+#100
+$finish();
+end
+endmodule
