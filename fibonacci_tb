@@ -1,0 +1,14 @@
+module sin fibonacci;
+    reg clk;
+    reg reset;
+    wire [31:0] fib_out;
+
+fibonacci DUT(.clk(clk), reset(reset), fib_out(fib_out));
+always #2 clk=~ clk
+initial begin
+   clk = 0;
+  reset = 0;
+  #1 reset = 1;
+  1500 $finish;
+end
+endmodule
