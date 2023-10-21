@@ -1,0 +1,22 @@
+module logic_gates_tb;
+reg a,b;
+wire c,d,e,f,g,h,i;
+logic_gates uut(
+.a(a),
+.b(b),
+.c(c),
+.d(d),
+.e(e),
+.f(f),
+.g(g),
+.h(h),
+.i(i)
+);
+initial begin
+a = 1'b0;
+b = 1'b0;
+#12 $finish();
+end
+always #6 a=~a;
+always #3 b=~b;
+endmodule
