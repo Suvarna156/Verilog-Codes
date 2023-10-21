@@ -1,0 +1,10 @@
+module factorial_test_bench();
+    reg [3:0] inp1;
+    wire [31:0] out1;
+factorial a1(inp1,out1);
+initial begin
+inp1=4
+#5 inp1=5;
+#6 inp1=8;
+end
+endmodule
