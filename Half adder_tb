@@ -1,0 +1,17 @@
+module HA_tb;
+reg x,y;
+wire sum,carry;
+HA uut(.x(x),.y(y),.sum(sum),.carry(carry));
+initial begin
+$monitor('time=%t a=%b b=%b sum=%b carry=%b',$time,a,b);
+x=0;y=0;
+#100
+x=0;y=1;
+#100
+x=1;y=0;
+#100
+x=1;y=1;
+#100
+$finish();
+end
+endmodule
